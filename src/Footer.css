@@ -1,0 +1,35 @@
+.centered-element {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.icon-link {
+    color: #525d4c;
+}
+
+.icon-link:hover {
+    color: #4c7c2a;
+}
+
+.social-media {
+    margin: 2% 0% !important;
+}
+
+.footer {
+    font-size: calc(10px + 1.5vmin);
+}
+
+h6 {
+    font-size: calc(10px + 2vmin) !important;
+}
+
+.contact-link {
+    color: currentColor;
+    text-decoration: none;
+}
+
+.contact-link:hover {
+    color: #4c7c2a;
+    text-decoration: underline;
+}

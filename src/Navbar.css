@@ -1,0 +1,22 @@
+.navbar-collapse {
+    justify-content: end;
+}
+
+.navbar-link,
+.navbar-collapse .social-media .icon-link {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem;
+}
+
+.navbar-link:hover,
+.navbar-collapse .social-media .icon-link:hover {
+    color: rgba(255, 255, 255, .55);
+    cursor: pointer;
+}
+
+@media (min-width: 992px) {
+    .social-media-icons {
+        display: none;
+    }
+}

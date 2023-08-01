@@ -1,0 +1,93 @@
+.App-body {
+    background-color: white;
+    color: #485342;
+    font-size: calc(10px + 1.5vmin);
+}
+
+.App-link {
+    color: #61dafb;
+}
+
+h1 {
+    font-size: calc(1.3rem + 1.65vw) !important;
+}
+
+.row {
+    --bs-gutter-x: 0
+}
+
+.locationDescription {
+    background-color: #525d4c;
+    color: white;
+    padding-top: 4%;
+    padding-bottom: 4%;
+}
+
+.card {
+    width: 100% !important;
+}
+
+.card-body {
+    background-color: #525D4C;
+    color: #c7cec9;
+}
+
+.cardsColumn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+}
+
+.customBackground {
+    background-color: #c7cec9;
+}
+
+.centered-element {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.subtitle {
+    margin-bottom: 1%;
+    font-style: italic;
+}
+
+.cardTitle {
+    font-size: calc(5px + 1.5vmin);
+}
+
+.activitiesContainer {
+    padding-top: 4%;
+}
+
+.offcanvas-top {
+    height: 55rem !important;
+}
+
+.custom-carousel-item {
+    margin: 0 !important;
+}
+
+.customCard {
+    cursor: pointer;
+}
+
+.customCard:hover {
+    border-color: #525d4c;
+}
+
+#scroll-to-top {
+    background-color: #525d4c;
+}
+
+#scroll-to-top:hover {
+    background-color: #4c7c2a;
+}
+
+img.card-img-top,
+img.img-fluid {
+    width: 100%;
+}
