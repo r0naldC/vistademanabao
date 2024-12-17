@@ -1,35 +1,24 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
+import Carousel from "./components/Carousel";
+import Header from "./components/Header";
+import Hero from "./components/Hero";
+import MainContainer from "./components/MainContaier";
+
+import slide1 from "./assets/slide1.webp";
+import slide2 from "./assets/slide2.webp";
+import slide3 from "./assets/slide3.webp";
+
+let images = [slide1, slide2, slide3];
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Carousel images={images} />
+      {/* <Header />
+      <Hero />
+      <MainContainer /> */}
     </>
-  )
+  );
 }
 
-export default App
+export default App;
