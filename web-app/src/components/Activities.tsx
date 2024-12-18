@@ -1,9 +1,11 @@
+import actcampprv1 from "../assets/act-cmp-pv-1.webp";
+import actmbprv1 from "../assets/act-mb-pv.webp";
+
 const callouts = [
   {
     name: "Mountain Bike",
     description: "",
-    imageSrc:
-      "https://tailwindui.com/plus/img/ecommerce-images/home-page-02-edition-01.jpg",
+    imageSrc: actmbprv1,
     imageAlt: "",
     href: "#",
   },
@@ -18,8 +20,7 @@ const callouts = [
   {
     name: "Camping",
     description: "",
-    imageSrc:
-      "https://tailwindui.com/plus/img/ecommerce-images/home-page-02-edition-03.jpg",
+    imageSrc: actcampprv1,
     imageAlt: "",
     href: "#",
   },
@@ -42,7 +43,7 @@ const Actvities = () => {
             Actividades en la zona
           </h2>
 
-          <div className="mt-6 space-y-12 lg:grid lg:grid-cols-2 lg:gap-x-6 lg:space-y-0">
+          <div className="mt-6 space-y-12 lg:grid lg:grid-cols-2 lg:gap-x-6 gap-y-12 lg:space-y-0">
             {callouts.map((callout) => (
               <div key={callout.name} className="group relative">
                 <img

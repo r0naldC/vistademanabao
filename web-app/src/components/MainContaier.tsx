@@ -1,18 +1,19 @@
 import Actvities from "./Activities";
+import Hero from "./Hero";
 import Section from "./Section";
 import prmt from "../assets/prjct-prmt.mp4";
 import mnv from "../assets/mn-v.mp4";
 import imgloct from "../assets/imgloct.webp";
 
-import { Element } from "react-scroll";
-
 const childs = [
+  { name: "home", child: <Hero /> },
   {
+    name: "project",
     child: (
-      <Element name="project">
+      <>
         <h1 className="text-gray-900 ">Vista De Manabao</h1>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 text-justify content-center">
-          <div className="content-center">
+        <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-4">
+          <div className="content-center text-justify">
             <p>
               Es un proyecto ubicado en la zona de <b>Manabao, Jarabacoa</b>.
               Cuenta con una altura máxima de 1,370 msnm y una altura mínima de
@@ -29,17 +30,15 @@ const childs = [
           </div>
           <video className="rounded-lg" src={prmt} controls></video>
         </div>
-      </Element>
+      </>
     ),
   },
   {
+    name: "location",
     child: (
-      <Element
-        name="location"
-        className="grid grid-cols-1 lg:grid-cols-2 gap-12 text-justify content-center"
-      >
-        <img src={imgloct} alt="Manabao" className="rounded-lg" />
-        <div className="content-center grid gap-4">
+      <div className="content-center grid md:grid-cols-1 lg:grid-cols-2 gap-4">
+        <img src={imgloct} alt="Manabao" className="rounded-lg self-center" />
+        <div className="text-justify">
           <div className="text-gray-900 align-to-center">
             <h1>Manabao</h1>
             <h2>"Cerca del cielo"</h2>
@@ -73,42 +72,35 @@ const childs = [
             metros sobre el nivel del mar.
           </p>
         </div>
-      </Element>
+      </div>
     ),
   },
   {
+    name: "gallery",
     child: (
-      <div id="gallery">
+      <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-4">
         <video className="rounded-lg" src={mnv} controls muted />
       </div>
     ),
   },
   {
+    name: "activities",
     child: (
-      <Element name="activities">
+      <>
         <Actvities />
-      </Element>
-    ),
-  },
-  {
-    child: (
-      <Element name="map">
-        <p>
-          dffsdbfsdfbsdfsdjfsdfsdfsdkjfbskjbdffsdbfsdfbsdfsdjfsdfsdfsdkjfbskjbdffsdbfsdfbsdfsdjfsdfsdfsdkjfbskjb
-        </p>
-      </Element>
+      </>
     ),
   },
 ];
 
 const MainContainer = () => {
   return (
-    <div className="main-container text-gray-500 grid gap-16">
-      {childs.map((item, index) => (
-        <>
-          <Section child={item.child} key={index} />
-        </>
-      ))}
+    <div className="main-container md:container md:mx-auto text-gray-500 grid grid-flow-row gap-y-20">
+      {childs.map((i, index) => {
+        return (
+          <Section name={i.name} child={i.child} key={`${i.name}-${index}`} />
+        );
+      })}
     </div>
   );
 };
