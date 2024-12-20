@@ -4,8 +4,19 @@ import Section from "./Section";
 import prmt from "../assets/prjct-prmt.mp4";
 import mnv from "../assets/mn-v.mp4";
 import imgloct from "../assets/imgloct.webp";
+import Header from "./Header";
+import MapComponent from "./Map";
+import Footer from "./Footer";
 
 const childs = [
+  {
+    name: "navbar",
+    child: (
+      <>
+        <Header />
+      </>
+    ),
+  },
   { name: "home", child: <Hero /> },
   {
     name: "project",
@@ -28,7 +39,7 @@ const childs = [
               Manabao. Cuenta con 17 arroyos dentro del proyecto.
             </p>
           </div>
-          <video className="rounded-lg" src={prmt} controls></video>
+          <video className="rounded-lg" src={prmt} controls muted></video>
         </div>
       </>
     ),
@@ -78,7 +89,7 @@ const childs = [
   {
     name: "gallery",
     child: (
-      <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-4">
+      <div className="grid  gap-4">
         <video className="rounded-lg" src={mnv} controls muted />
       </div>
     ),
@@ -90,6 +101,14 @@ const childs = [
         <Actvities />
       </>
     ),
+  },
+  // {
+  //   name: "map",
+  //   child: <MapComponent />,
+  // },
+  {
+    name: "contact",
+    child: <Footer />,
   },
 ];
 

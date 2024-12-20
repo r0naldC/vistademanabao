@@ -1,34 +1,40 @@
 import actcampprv1 from "../assets/act-cmp-pv-1.webp";
+import actcampprv2 from "../assets/act-cmp-pv-2.webp";
 import actmbprv1 from "../assets/act-mb-pv.webp";
+import actsndpprv1 from "../assets/act-snd-pv-1.webp";
+import actsndpprv2 from "../assets/act-snd-pv-2.webp";
+import actsndpprv3 from "../assets/act-snd-pv-3.webp";
+import actrcfprv1 from "../assets/act-rcf-pv-1.webp";
+import actrcfprv2 from "../assets/act-rcf-pv-2.webp";
+import actrcfprv3 from "../assets/act-rcf-pv-3.webp";
+import CustomCarousel from "./Carousel";
 
 const callouts = [
   {
     name: "Mountain Bike",
     description: "",
-    imageSrc: actmbprv1,
+    imageSrc: [actmbprv1],
     imageAlt: "",
     href: "#",
   },
   {
     name: "Senderismo",
     description: "",
-    imageSrc:
-      "https://tailwindui.com/plus/img/ecommerce-images/home-page-02-edition-02.jpg",
+    imageSrc: [actsndpprv1, actsndpprv2, actsndpprv3],
     imageAlt: "",
     href: "#",
   },
   {
     name: "Camping",
     description: "",
-    imageSrc: actcampprv1,
+    imageSrc: [actcampprv1, actcampprv2],
     imageAlt: "",
     href: "#",
   },
   {
     name: "Recolección de Café orgánico",
     description: "",
-    imageSrc:
-      "https://tailwindui.com/plus/img/ecommerce-images/home-page-02-edition-03.jpg",
+    imageSrc: [actrcfprv1, actrcfprv2, actrcfprv3],
     imageAlt: "",
     href: "#",
   },
@@ -45,12 +51,21 @@ const Actvities = () => {
 
           <div className="mt-6 space-y-12 lg:grid lg:grid-cols-2 lg:gap-x-6 gap-y-12 lg:space-y-0">
             {callouts.map((callout) => (
-              <div key={callout.name} className="group relative">
-                <img
+              <div
+                key={callout.name}
+                className="group relative custom-navigation"
+                onClick={() => event?.preventDefault()}
+              >
+                <CustomCarousel
+                  images={callout.imageSrc}
+                  imageClass="w-full rounded-lg bg-white object-cover group-hover:opacity-75 max-sm:h-80 sm:aspect-[2/1] lg:aspect-square"
+                />
+                {/* <img
                   alt={callout.imageAlt}
                   src={callout.imageSrc}
                   className="w-full rounded-lg bg-white object-cover group-hover:opacity-75 max-sm:h-80 sm:aspect-[2/1] lg:aspect-square"
-                />
+                /> */}
+
                 <h3 className="mt-6 text-sm text-gray-500">
                   <a href={callout.href}>
                     <span className="absolute inset-0" />

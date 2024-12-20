@@ -5,7 +5,6 @@ import MainContainer from "./components/MainContaier";
 function App() {
   return (
     <>
-      <Header />
       <MainContainer />
     </>
   );

@@ -2,9 +2,13 @@ import { Carousel } from "@material-tailwind/react";
 
 interface Props {
   images: string[];
+  imageClass?: string;
 }
 
-const CustomCarousel = ({ images }: Props) => {
+const CustomCarousel = ({
+  images,
+  imageClass = "h-full w-full object-cover",
+}: Props) => {
   return (
     <Carousel
       className="rounded-xl"
@@ -28,7 +32,7 @@ const CustomCarousel = ({ images }: Props) => {
       {images.map((image, index) => {
         return (
           <img
-            className="h-full w-full object-cover"
+            className={imageClass}
             src={image}
             key={index}
             alt={`slide-${index}`}
