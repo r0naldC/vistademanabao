@@ -5,7 +5,7 @@ import prmt from "../assets/prjct-prmt.mp4";
 import mnv from "../assets/mn-v.mp4";
 import imgloct from "../assets/imgloct.webp";
 import Header from "./Header";
-import MapComponent from "./Map";
+
 import Footer from "./Footer";
 
 const childs = [
